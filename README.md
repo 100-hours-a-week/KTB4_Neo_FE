@@ -215,7 +215,7 @@
 | 로그인 | `/login` | <img src="docs/screenshots/login.png" width="600" alt="로그인 화면"> | 이메일·비밀번호 입력, 입력값 검증, 로그인 |
 | 회원가입 | `/signup` | <img src="docs/screenshots/signup.png" width="600" alt="회원가입 화면"> | 회원 정보 입력, 프로필 이미지 등록, 회원가입 |
 | 로그아웃 | 공통 헤더 | <img src="docs/screenshots/logout.png" width="600" alt="로그아웃 화면"> | 사용자 인증 정보 제거, 로그인 상태 초기화 및 로그인 페이지 이동 |
-| 게시글 목록 | `/posts` | <img src="docs/screenshots/post-list.png" width="600" alt="게시글 목록 화면"> | 게시글 목록 조회, 페이지네이션, 게시글 작성 페이지 이동 |
+| 게시글 목록 | `/posts` | <img src="docs/screenshots/posts.png" width="600" alt="게시글 목록 화면"> | 게시글 목록 조회, 페이지네이션, 게시글 작성 페이지 이동 |
 | 게시글 상세 | `/posts/:postId` | <img src="docs/screenshots/post-detail.png" width="600" alt="게시글 상세 화면"> | 게시글 조회, 좋아요, 댓글 작성·수정·삭제, 게시글 신고 |
 | 게시글 작성 | `/posts/new` | <img src="docs/screenshots/post-create.png" width="600" alt="게시글 작성 화면"> | 제목·내용·이미지 입력 및 게시글 등록 |
 | 임시글 복구 확인 모달 | `/posts/new` | <img src="docs/screenshots/draft-recovery-modal.png" width="600" alt="임시글 복구 확인 모달"> | 저장된 임시글 확인, 임시글 복구 또는 새 글 작성 선택 |
