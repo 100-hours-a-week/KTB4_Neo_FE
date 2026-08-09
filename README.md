@@ -220,19 +220,22 @@
 
 화면 이미지는 `docs/screenshots/` 디렉터리에 저장되어 있습니다.
 
-| 페이지 | 경로 | 화면 | 주요 기능 |
+| 페이지 및 기능 | 경로 | 화면 | 주요 기능 |
 |---|---|---|---|
 | 로그인 | `/login` | <img src="docs/screenshots/login.png" width="600" alt="로그인 화면"> | 이메일·비밀번호 입력, 입력값 검증, 로그인 |
 | 회원가입 | `/signup` | <img src="docs/screenshots/signup.png" width="600" alt="회원가입 화면"> | 회원 정보 입력, 프로필 이미지 등록, 회원가입 |
-| 게시글 목록 | `/posts` | <img src="docs/screenshots/posts.png" width="600" alt="게시글 목록 화면"> | 게시글 목록 조회, 페이지네이션, 게시글 작성 페이지 이동 |
+| 로그아웃 | 공통 헤더 | <img src="docs/screenshots/logout.png" width="600" alt="로그아웃 화면"> | 사용자 인증 정보 제거, 로그인 상태 초기화 및 로그인 페이지 이동 |
+| 게시글 목록 | `/posts` | <img src="docs/screenshots/post-list.png" width="600" alt="게시글 목록 화면"> | 게시글 목록 조회, 페이지네이션, 게시글 작성 페이지 이동 |
 | 게시글 상세 | `/posts/:postId` | <img src="docs/screenshots/post-detail.png" width="600" alt="게시글 상세 화면"> | 게시글 조회, 좋아요, 댓글 작성·수정·삭제, 게시글 신고 |
-| 게시글 작성 | `/posts/new` | <img src="docs/screenshots/post-create.png" width="600" alt="게시글 작성 화면"> | 제목·내용·이미지 입력, 임시 저장, 게시글 등록 |
+| 게시글 작성 | `/posts/new` | <img src="docs/screenshots/post-create.png" width="600" alt="게시글 작성 화면"> | 제목·내용·이미지 입력 및 게시글 등록 |
+| 임시글 복구 확인 모달 | `/posts/new` | <img src="docs/screenshots/draft-recovery-modal.png" width="600" alt="임시글 복구 확인 모달"> | 저장된 임시글 확인, 임시글 복구 또는 새 글 작성 선택 |
+| 임시글 자동 저장 | `/posts/new` | <img src="docs/screenshots/draft-auto-save.png" width="600" alt="임시글 자동 저장 화면"> | 게시글 작성 내용 자동 저장 및 저장 상태 표시 |
+| 명시적 임시 저장 | `/posts/new` | <img src="docs/screenshots/draft-manual-save.png" width="600" alt="명시적 임시 저장 화면"> | 사용자가 임시 저장 버튼을 눌러 작성 내용 저장 |
+| 임시글 삭제 | `/posts/new` | <img src="docs/screenshots/draft-delete.png" width="600" alt="임시글 삭제 화면"> | 저장된 임시글 삭제 및 작성 상태 초기화 |
 | 게시글 수정 | `/posts/:postId/edit` | <img src="docs/screenshots/post-edit.png" width="600" alt="게시글 수정 화면"> | 기존 게시글 조회, 내용 및 이미지 수정 |
 | 마이페이지 | `/mypage` | <img src="docs/screenshots/mypage.png" width="600" alt="마이페이지 화면"> | 회원 정보 조회, 닉네임 및 프로필 이미지 수정, 회원 탈퇴 |
 | 비밀번호 변경 | `/mypage/password` | <img src="docs/screenshots/password-edit.png" width="600" alt="비밀번호 변경 화면"> | 기존 비밀번호 확인, 새 비밀번호 입력 및 변경 |
 | 신고 모달 | 게시글 상세 화면 | <img src="docs/screenshots/report-modal.png" width="600" alt="게시글 신고 모달"> | 신고 유형 선택, 신고 사유 입력 및 제출 |
-| 확인 모달 | 공통 | <img src="docs/screenshots/confirm-modal.png" width="600" alt="확인 모달"> | 게시글·댓글 삭제 및 회원 탈퇴 작업 재확인 |
-| 404 페이지 | 정의되지 않은 경로 | <img src="docs/screenshots/not-found.png" width="600" alt="404 페이지"> | 잘못된 주소 안내 및 메인 페이지 이동 |
-
+| 회원 탈퇴 | `/mypage` | <img src="docs/screenshots/account-delete.png" width="600" alt="회원 탈퇴 화면"> | 회원 탈퇴 의사 확인, 사용자 계정 삭제 및 인증 상태 초기화 |
 
 
