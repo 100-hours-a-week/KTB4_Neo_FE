@@ -1,0 +1,282 @@
+.mypage-main {
+  padding-top: 48px;
+  padding-bottom: 56px;
+}
+
+.mypage-form {
+  width: 100%;
+  max-width: 392px;
+  margin: 0 auto;
+  padding: 30px 28px;
+  border: 1px solid #e6eaf0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+.mypage-form .page-title {
+  margin-bottom: 36px;
+}
+
+.mypage-profile-section {
+  margin-bottom: 28px;
+}
+
+.mypage-profile-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mypage-profile-image-button {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #d7dee8;
+  background: #f2f6fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mypage-profile-image-button:hover {
+  background: #eaf2ff;
+}
+
+.mypage-profile-image-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-change-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 44px;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 14px;
+  background: rgba(53, 120, 229, 0.88);
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mypage-info-field {
+  margin-bottom: 16px;
+}
+
+.mypage-info-field label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mypage-email {
+  margin: 0;
+  min-height: 42px;
+  border: 1px solid #e6eaf0;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 11px 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.mypage-form .form-field {
+  margin-bottom: 4px;
+}
+
+.mypage-form .form-field label {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mypage-form .form-field input {
+  width: 100%;
+  height: 42px;
+}
+
+.mypage-form .helper-text {
+  margin: 0 0 8px;
+}
+
+.mypage-form .primary-button {
+  height: 40px;
+}
+
+.withdraw-button {
+  display: block;
+  margin: 14px auto 0;
+  font-size: 13px;
+}
+
+.complete-button {
+  width: 128px;
+  height: 39px;
+  margin: 48px auto 0;
+  border-radius: 6px;
+  display: flex;
+}
+
+.toast-message {
+  position: fixed;
+  left: 50%;
+  bottom: 72px;
+  z-index: 120;
+  min-width: 260px;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 24px;
+  background: #6f6f6f;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  transform: translateX(-50%) translateY(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.toast-message.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast-message.is-error {
+  background: #c2413b;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-backdrop[hidden],
+.toast-message[hidden] {
+  display: none;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.confirm-modal {
+  width: 100%;
+  max-width: 352px;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 30px 26px;
+  text-align: center;
+}
+
+.confirm-modal h2 {
+  margin: 0 0 14px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.confirm-modal p {
+  margin: 0 0 22px;
+  color: #000000;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.confirm-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-button {
+  width: 96px;
+  height: 36px;
+  border: 0;
+  border-radius: 6px;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cancel-button {
+  background: #4b5563;
+  color: #ffffff;
+}
+
+.confirm-button {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.password-main {
+  padding-top: 48px;
+  padding-bottom: 56px;
+}
+
+.password-form {
+  width: 100%;
+  max-width: 392px;
+  margin: 0 auto;
+  padding: 30px 28px;
+  border: 1px solid #e6eaf0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+.password-form .page-title {
+  margin-bottom: 36px;
+}
+
+.password-form .form-field {
+  margin-bottom: 8px;
+}
+
+.password-form .form-field label {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.password-form .form-field input {
+  width: 100%;
+  height: 42px;
+}
+
+.password-form .helper-text {
+  margin: 4px 0 14px;
+}
+
+.password-form .primary-button {
+  height: 40px;
+  margin-top: 6px;
+}
+
+@media(max-width:640px) {
+  .mypage-form,
+  .password-form {
+    padding: 26px 20px;
+  }
+}

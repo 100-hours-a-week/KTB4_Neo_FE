@@ -1,0 +1,38 @@
+.profile-link-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pagination-page-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment-mode-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 4px;
+  color: #666;
+  font-size: 13px;
+}
+
+.comment-mode-row button {
+  border: 0;
+  background: transparent;
+  color: #7f6aee;
+  cursor: pointer;
+}
+
+.not-found-main {
+  display: flex;
+  min-height: 70vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}

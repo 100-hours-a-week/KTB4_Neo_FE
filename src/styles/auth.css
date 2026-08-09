@@ -1,0 +1,158 @@
+.login-page {
+    background: var(--primary)
+}
+
+.auth-main {
+    padding-top: 72px;
+    padding-bottom: 48px
+}
+
+.login-main {
+    min-height: 100vh;
+    padding: 32px 20px;
+    max-width: none;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.signup-main {
+    padding-top: 48px
+}
+
+.signup-main .auth-form {
+    max-width: 448px
+}
+
+.signup-main #email-helper {
+    white-space: nowrap
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 392px;
+    margin: 0 auto;
+    padding: 30px 28px;
+    border: 1px solid #e6eaf0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: var(--card-shadow)
+}
+
+.auth-title {
+    margin: 0 0 28px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--display-font)
+}
+
+.login-service-title {
+    color: var(--text);
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 800
+}
+
+.login-heading {
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e1e6ef
+}
+
+.login-description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.signup-title {
+    margin-bottom: 22px
+}
+
+.auth-form .primary-button {
+    margin-top: 8px
+}
+
+.auth-form .form-field {
+    margin-bottom: 12px
+}
+
+.auth-form .form-field .helper-text {
+    margin: 4px 0 8px
+}
+
+.auth-link {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800
+}
+
+.auth-signup-prompt {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.auth-signup-prompt .auth-link {
+    margin-top: 0;
+    color: var(--primary)
+}
+
+.profile-upload-block {
+    margin-bottom: 20px
+}
+
+.profile-upload-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 800
+}
+
+.profile-upload-circle {
+    width: 132px;
+    height: 132px;
+    margin: 8px auto 16px;
+    border: 0;
+    border-radius: 50%;
+    border: 1px solid #d7dee8;
+    background: #f2f6fc;
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover
+}
+
+.profile-upload-circle:hover {
+    background: #eaf2ff
+}
+
+.profile-upload-circle.has-image {
+    color: transparent
+}
+
+.profile-upload-block .helper-text {
+    margin: 0 0 8px
+}
+
+@media(max-width:640px) {
+    .signup-main #email-helper {
+        white-space: normal
+    }
+}

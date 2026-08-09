@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 - 취업 시장에서 살아남기</title>
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/auth.css" />
+</head>
+<body class="login-page">
+  <main class="page-main auth-main login-main">
+    <form id="login-form" class="auth-form" novalidate>
+      <div class="login-heading">
+        <h1 class="auth-title login-service-title">로그인</h1>
+        <p class="login-description">계정으로 로그인하고 커뮤니티를 이용해보세요.</p>
+      </div>
+      <div class="form-field">
+        <label for="email">이메일</label>
+        <input id="email" name="email" type="email" placeholder="이메일을 입력하세요." />
+      </div>
+      <div class="form-field">
+        <label for="password">비밀번호</label>
+        <input id="password" name="password" type="password" placeholder="비밀번호를 입력하세요." />
+      </div>
+      <p id="login-helper" class="helper-text" aria-live="polite"></p>
+      <button id="login-button" class="primary-button full-width-button" type="submit" disabled>로그인</button>
+      <div class="auth-signup-prompt">
+        <span>아직 계정이 없나요?</span>
+        <a class="auth-link" href="./signup.html">회원가입</a>
+      </div>
+    </form>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>
