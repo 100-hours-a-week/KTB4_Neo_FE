@@ -6,14 +6,17 @@ export default function ConfirmModal({
   message,
   onCancel,
   onConfirm,
+  onDismiss = onCancel,
   isConfirming = false,
   confirmLabel = "확인",
   cancelLabel = "취소",
 }) {
   const cancelRef = useRef(null);
   const onCancelRef = useRef(onCancel);
+  const onDismissRef = useRef(onDismiss);
   const isConfirmingRef = useRef(isConfirming);
   onCancelRef.current = onCancel;
+  onDismissRef.current = onDismiss;
   isConfirmingRef.current = isConfirming;
 
   useEffect(() => {
@@ -24,7 +27,7 @@ export default function ConfirmModal({
 
     const closeOnEscape = (event) => {
       if (event.key === "Escape" && !isConfirmingRef.current) {
-        onCancelRef.current();
+        onDismissRef.current();
       }
     };
     document.addEventListener("keydown", closeOnEscape);
@@ -50,7 +53,7 @@ export default function ConfirmModal({
           event.target === event.currentTarget &&
           !isConfirmingRef.current
         ) {
-          onCancelRef.current();
+          onDismissRef.current();
         }
       }}
     >

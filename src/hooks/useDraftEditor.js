@@ -448,6 +448,10 @@ export function useDraftEditor() {
     }
   }, [handleRequestError, isDeleting, pendingDraft, resetLocalDraft]);
 
+  const dismissPendingDraft = useCallback(() => {
+    if (mountedRef.current) setPendingDraft(null);
+  }, []);
+
   const reloadServerDraft = useCallback(async () => {
     const active = await getActiveDraft();
     if (!active) {
@@ -503,6 +507,7 @@ export function useDraftEditor() {
     updateContent,
     setImageUploading,
     resumePendingDraft: () => applyServerDraft(pendingDraft),
+    dismissPendingDraft,
     discardPendingDraft,
     saveNow,
     publish,

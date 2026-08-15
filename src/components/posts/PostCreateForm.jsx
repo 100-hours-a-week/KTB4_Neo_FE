@@ -144,6 +144,7 @@ export default function PostCreateForm({ onPublished, onDeleted }) {
         cancelLabel="아니오"
         confirmLabel="예"
         isConfirming={draft.isDeleting}
+        onDismiss={draft.dismissPendingDraft}
         onCancel={discardPending}
         onConfirm={draft.resumePendingDraft}
       />
