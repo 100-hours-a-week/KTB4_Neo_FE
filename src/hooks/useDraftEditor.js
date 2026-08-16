@@ -73,6 +73,7 @@ export function useDraftEditor() {
   const [isPublishing, setIsPublishing] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isExplicitSaving, setIsExplicitSaving] = useState(false);
+  const [isConflictResolving, setIsConflictResolving] = useState(false);
 
   const snapshotRef = useRef({ ...EMPTY_CONTENT, contentVersion: 0 });
   const versionedContentRef = useRef(EMPTY_CONTENT);
@@ -148,6 +149,7 @@ export function useDraftEditor() {
     setSavedAt(null);
     setRdbSavedAt(null);
     setError(null);
+    setIsConflictResolving(false);
   }, [clearDebounce, clearTransient]);
 
   const applyServerDraft = useCallback((draft) => {
@@ -452,6 +454,40 @@ export function useDraftEditor() {
     if (mountedRef.current) setPendingDraft(null);
   }, []);
 
+  const resolveConflictWithLocal = useCallback(async () => {
+    if (isConflictResolving) return null;
+    setIsConflictResolving(true);
+    clearDebounce();
+
+    try {
+      const latestDraft = await getActiveDraft();
+      if (!latestDraft) {
+        resetLocalDraft();
+        return null;
+      }
+
+      const localContent = contentOf(snapshotRef.current);
+      const rebasedSnapshot = {
+        ...localContent,
+        contentVersion: Number(latestDraft.contentVersion) + 1,
+      };
+
+      draftIdRef.current = latestDraft.draftId;
+      snapshotRef.current = rebasedSnapshot;
+      versionedContentRef.current = contentOf(latestDraft);
+      blockedRef.current = false;
+      conflictErrorRef.current = null;
+      retrySnapshotRef.current = rebasedSnapshot;
+
+      setDraftId(latestDraft.draftId);
+      setError(null);
+
+      return await runAutosave(rebasedSnapshot);
+    } finally {
+      if (mountedRef.current) setIsConflictResolving(false);
+    }
+  }, [clearDebounce, isConflictResolving, resetLocalDraft, runAutosave]);
+
   const reloadServerDraft = useCallback(async () => {
     const active = await getActiveDraft();
     if (!active) {
@@ -504,11 +540,13 @@ export function useDraftEditor() {
     isPublishing,
     isDeleting,
     isExplicitSaving,
+    isConflictResolving,
     updateContent,
     setImageUploading,
     resumePendingDraft: () => applyServerDraft(pendingDraft),
     dismissPendingDraft,
     discardPendingDraft,
+    resolveConflictWithLocal,
     saveNow,
     publish,
     remove,

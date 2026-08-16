@@ -110,6 +110,25 @@ export default function PostCreateForm({ onPublished, onDeleted }) {
     }
   }
 
+  async function keepCurrentContent() {
+    try {
+      const response = await draft.resolveConflictWithLocal();
+      if (response) {
+        setIsConflictModalOpen(false);
+      } else {
+        setToast({
+          message: "현재 내용을 다시 저장하지 못했습니다.",
+          type: "error",
+        });
+      }
+    } catch (error) {
+      setToast({
+        message: messageFor(error, "현재 내용을 다시 저장하지 못했습니다."),
+        type: "error",
+      });
+    }
+  }
+
   return (
     <>
       <PostForm
@@ -166,7 +185,8 @@ export default function PostCreateForm({ onPublished, onDeleted }) {
         message={messageFor(draft.error, "다른 화면에서 수정된 임시글이 있습니다.")}
         cancelLabel="현재 내용 유지"
         confirmLabel="서버 내용 불러오기"
-        onCancel={() => setIsConflictModalOpen(false)}
+        isConfirming={draft.isConflictResolving}
+        onCancel={keepCurrentContent}
         onConfirm={loadServerDraft}
       />
 
