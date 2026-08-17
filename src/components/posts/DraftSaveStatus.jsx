@@ -23,8 +23,6 @@ export default function DraftSaveStatus({
   else if (status === DRAFT_SAVE_STATUS.AUTOSAVED) {
     const time = formatTime(savedAt);
     text = `임시 저장 완료${time ? ` (${time})` : ""}`;
-  } else if (status === DRAFT_SAVE_STATUS.RDB_SAVED) {
-    text = "임시글 저장 완료";
   } else if (status === DRAFT_SAVE_STATUS.ERROR) {
     text = "자동 저장 실패";
   }

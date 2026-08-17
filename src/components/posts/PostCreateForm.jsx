@@ -61,6 +61,10 @@ export default function PostCreateForm({ onPublished, onDeleted }) {
   async function saveNow() {
     try {
       await draft.saveNow();
+      setToast({
+        message: "임시글 저장이 완료되었습니다.",
+        type: "success",
+      });
     } catch (error) {
       setToast({
         message: messageFor(error, "임시글 저장에 실패했습니다."),
